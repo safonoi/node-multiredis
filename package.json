@@ -1,5 +1,5 @@
 {
-  "name": "node-mredis",
+  "name": "multiredis",
   "version": "0.1.0",
   "description": "Client library for working with distributed redis servers",
   "author": "Safonov Oleg <safonoi@gmail.com>",

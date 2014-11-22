@@ -1,10 +1,10 @@
 var util = require('util');
 var async = require('async');
-var mredis = require('../lib/mredis.js');
+var multiredis = require('../lib/multiredis.js');
 
-var mredisConfig = {
-	// Logging extended mredis info in stdout when debug is enabled
-	debug: false,
+var multiredisConfig = {
+	// Logging extended multiredis info in stdout when debug is enabled
+	debug: true,
 	// Redis hosts declaration
 	hosts: {
 		// Master-slave declaration
@@ -61,18 +61,18 @@ var mredisConfig = {
 	},
 };
 
-mredis = new mredis(mredisConfig);
+multiredis = new multiredis(multiredisConfig);
 
-mredis.on('error', function(err) {
-	console.log('Cauth mredis error ' + err);
+multiredis.on('error', function(err) {
+	console.log('Cauth multiredis error ' + err);
 });
 
 // Simple usage example
-// mredis.exec('set', ['setKey', 'Hi man']);
-// mredis.exec('expire', ['setKey', 1]);
-// mredis.exec('get', ['setKey']);
+// multiredis.exec('set', ['setKey', 'Hi man']);
+// multiredis.exec('expire', ['setKey', 1]);
+// multiredis.exec('get', ['setKey']);
 
-// More difficult examples of the mredis operations
+// More difficult examples of the multiredis operations
 var redisExamples = [{
 	command: 'hset',
 	args: ['htable', 'hkey1', 0]
@@ -100,18 +100,18 @@ for (var exampleIndex in redisExamples) {
 	(function(redisCommand, redisArgs) {
 		testFunctions.push(
 			function(callback) {
-				mredis.exec(redisCommand, redisArgs, callback);
+				multiredis.exec(redisCommand, redisArgs, callback);
 			}
 		);
 	}(redisCommand, redisArgs))
 }
 
-// Eval mredis test functions in series
+// Eval multiredis test functions in series
 async.series(
 	testFunctions,
 	function(err, results) {
 		console.log('-------------------------');
-		console.log('mredis was called ' + mredis.execCallCounter + ' times');
+		console.log('multiredis was called ' + multiredis.execCallCounter + ' times');
 		console.log('[Results]');
 		for (var indexResult in results) {
 			console.log(redisExamples[indexResult].command +
