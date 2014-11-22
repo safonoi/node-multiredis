@@ -1,0 +1,32 @@
+{
+  "name": "node-mredis",
+  "version": "0.1.0",
+  "description": "Client library for working with distributed redis servers",
+  "author": "Safonov Oleg <safonoi@gmail.com>",
+  "contributors": [{
+    "name": "Safonov Oleg",
+    "email": "safonoi@gmail.com"
+  }],
+  "keywords": [
+    "redis",
+    "mredis",
+    "share",
+    "scaling",
+    "multi redis"
+  ],
+  "main": "lib/mredis.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/safonoi/node-mredis"
+  },
+  "bugs": {
+    "url": "https://github.com/safonoi/node-mredis/issues"
+  },
+  "dependencies": {
+    "redis": "*",
+    "memcached": "*",
+    "async": "*",
+    "crc": "*"
+  },
+  "license": "MIT"
+}
