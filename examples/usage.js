@@ -37,7 +37,7 @@ var multiredisConfig = {
 	//
 	// Global redis settings
 	// 
-	//pass : 'Yf38bhUHUr3h3u242',
+	//pass : 'pass',
 	// params: {
 	// 	'max_attempts': 1
 	// },
