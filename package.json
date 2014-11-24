@@ -1,6 +1,6 @@
 {
   "name": "multiredis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Client library for working with distributed redis servers",
   "author": "Safonov Oleg <safonoi@gmail.com>",
   "contributors": [{
@@ -9,18 +9,18 @@
   }],
   "keywords": [
     "redis",
-    "mredis",
+    "multiredis",
     "share",
     "scaling",
     "multi redis"
   ],
-  "main": "lib/mredis.js",
+  "main": "lib/multiredis.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/safonoi/node-mredis"
+    "url": "https://github.com/safonoi/node-multiredis"
   },
   "bugs": {
-    "url": "https://github.com/safonoi/node-mredis/issues"
+    "url": "https://github.com/safonoi/node-multiredis/issues"
   },
   "dependencies": {
     "redis": "*",
