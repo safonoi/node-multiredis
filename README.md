@@ -3,10 +3,9 @@ node-multiredis
 
 Client library for working with distributed redis servers.
 It allows you to use redis servers more effectively and suitable for high-load projects with thousands requests per second.
-Use this lib if you need a the common data on several servers (nodes of your system). Ex. cache, counters, sets..
+Use this lib if you need a common data on several servers (nodes of your system). Ex. cache, counters, sets..
 If you use only one instance of the redis-server you use only one core!
-Server does not use all of its resources and the capacity of such a decision is limited.  
-And sometimes you need use cache on the several servers. Multiredis will help you to do it.
+Server does not use all of its resources. And sometimes you need use cache on the several servers. Multiredis will help you to do it.
 
 Install with 
 ----
